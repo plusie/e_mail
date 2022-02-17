@@ -64,8 +64,9 @@ def send_email(from_email, to_email, content, subject):
         server.login(msg["From"], from_email['PWD'])
         server.send_message(msg)
         logger.warning("Email enviado com sucesso de {} para {}".format(from_email['e_mail'], to_email))
+        logger.debug(content)
     except Exception as e:
-        logger.debug(e)
+        logger.error(e)
     finally:
         server.quit() 
         
