@@ -77,4 +77,4 @@ Este é o seu código: {}\n
 Para utilizar, abra o app do Ifood > Perfil > Pagamentos > Resgatar Ifood Card\n
 Ele tem um saldo de R$ {} e é válido até {}. Aproveite!\n
           """.format(e[0], e[1], e[2])
-    send_email(mails, e[3], content, "Hackathon 2022 - Voucher iFood")
+    send_email(FROM, e[3], content, "Hackathon 2022 - Voucher iFood")
